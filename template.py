@@ -4,7 +4,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format="[%(asctime)s]: %(message)s:")
 
-project_name = "cnn-classifier"
+project_name = "cnn_classifier"
 
 list_of_files = [
     ".github/workflows/.gitkeep",
@@ -32,7 +32,7 @@ for filepath in list_of_files:
 
     if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
         with open(filepath, "w") as f:
-            pass  # creating and empty file onlye
+            pass  # creating and empty file only
             logging.info(f"Creating empty file: {filepath}")
     else:
         logging.info(f"{filename} already exists")
